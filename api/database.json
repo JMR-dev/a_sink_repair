@@ -1,0 +1,40 @@
+    {
+        "serviceRequest" : [
+           {
+            "id": null,
+            "description": "some description",
+            "serviceAddress": "some address",
+            "spendingLimit": 9999,
+            "jobDeadline": "01/01/2022"
+            }
+    ],
+        
+        "employeeTable" : [
+            {
+                "id": null,
+                "empName": "John Doe"
+            }
+        ],
+        "jobTable" : [
+            {
+            "id": null,
+            "serviceRequestId": 1,
+            "employeeId": 1,
+            "jobStatusComplete": false 
+            }
+        
+        ],
+    
+    "requests": [
+        {
+            {
+                "id": 1,
+                "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
+                "address": "34445 Bianka Ports",
+                "budget": 400,
+                "neededBy": "2021-08-27"
+            }
+            
+        }
+    ]
+}
