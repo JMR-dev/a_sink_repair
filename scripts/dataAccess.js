@@ -1,5 +1,7 @@
 const API = "http://localhost:8088"
 
+const applicationState = {}
+
 export const fetchRequests = () => {
     return fetch(`${API}/serviceRequests`)
         .then(response => response.json())
@@ -10,6 +12,7 @@ export const fetchRequests = () => {
             }
         )
 }
+
 export const fetchJobTable = () => {
     return fetch(`${API}/jobTable`)
         .then(response => response.json())
