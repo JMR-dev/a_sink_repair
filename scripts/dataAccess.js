@@ -1,12 +1,22 @@
 const API = "http://localhost:8088"
 
 export const fetchRequests = () => {
-    return fetch(`${API}/requests`)
+    return fetch(`${API}/serviceRequests`)
         .then(response => response.json())
         .then(
             (serviceRequests) => {
-                // Store the external state in application state
+                // Store the external state of  in application state
                 applicationState.requests = serviceRequests
+            }
+        )
+}
+export const fetchJobTable = () => {
+    return fetch(`${API}/jobTable`)
+        .then(response => response.json())
+        .then(
+            (jobTable) => {
+                // Stores the external state of jobTable in application state
+                applicationState.requests = jobTable
             }
         )
 }
@@ -26,9 +36,10 @@ export const getJobTable = () => {
 // Need copies of permanent state set as empty arrays, matching the keys in your JSON file
 
 
-const serviceRequest = []
-const employeeTable = []
-const jobTable = []
-const requests = []
+export const serviceRequest = []
+export const employeeTable = []
+export const jobTable = []
+export const requests = []
 
-const appState = []
+// misc application state, if needed?
+export const appState = []

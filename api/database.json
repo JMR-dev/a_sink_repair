@@ -1,5 +1,5 @@
     {
-        "serviceRequest" : [
+        "serviceRequests" : [
            {
             "id": null,
             "description": "some description",
