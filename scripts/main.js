@@ -1,3 +1,15 @@
-import { getRequests } from "./dataAccess.js"
+import { fetchRequests } from "./dataAccess.js"
+import { SinkRepair } from "./SinkRepair.js"
 
-const whatever = getRequests()
+
+const mainContainer = document.querySelector("#container")
+
+const render = () => {
+    fetchRequests().then(
+        () => {
+            mainContainer.innerHTML = SinkRepair()
+        }
+    )
+}
+
+render()
