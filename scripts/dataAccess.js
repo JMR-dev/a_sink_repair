@@ -38,6 +38,38 @@ export const fetchEmpTable = () => {
             }
         )
 }
+export const sendRequest = (userServiceRequest) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userServiceRequest)
+    }
+
+
+    return fetch(`${API}/serviceRequests`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+
+        })
+}
+
+return fetch(`${API}/requests`, fetchOptions)
+.then(response => response.json())
+.then(() => {
+    mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+})
+
+mainContainer.addEventListener(
+    "stateChanged",
+    customEvent => {
+        render()
+    }
+)
+
+
+
 export const getRequests = () => {
     return applicationState.serviceRequests.map(serviceRequest => ({...serviceRequest}))
 }
